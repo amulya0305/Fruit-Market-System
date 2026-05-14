@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fruit Market Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            🍎 Fruit & Vegetable Market Pro
+        </h1>
+
+    </header>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h2>Add / Update Product</h2>
+
+            <input type="hidden" id="productId">
+
+            <input type="text" id="name" placeholder="Product Name">
+
+            <input type="text" id="category" placeholder="Fruit / Vegetable">
+
+            <input type="number" id="price" placeholder="Price">
+
+            <input type="number" id="quantity" placeholder="Quantity">
+
+            <button onclick="saveProduct()">
+                Save Product
+            </button>
+
+        </div>
+
+
+        <div class="product-box">
+
+            <div class="top-bar">
+
+                <input type="text" id="search" placeholder="Search Product" onkeyup="fetchProducts()">
+
+                <select id="filter" onchange="fetchProducts()">
+
+                    <option value="">
+                        All Categories
+                    </option>
+
+                    <option value="Fruit">
+                        Fruit
+                    </option>
+
+                    <option value="Vegetable">
+                        Vegetable
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="dashboard">
+
+                <div class="card">
+
+                    <h3>Total Products</h3>
+
+                    <p id="totalProducts">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Inventory Value</h3>
+
+                    <p id="totalValue">₹0</p>
+
+                </div>
+
+            </div>
+
+            <div id="productList"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
